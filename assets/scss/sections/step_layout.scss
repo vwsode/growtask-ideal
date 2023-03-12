@@ -1,0 +1,259 @@
+.step {
+    &__inner {
+        border-bottom: vw(2px) solid $color-gray-200;
+        @media screen and (max-width: $screen-width-hd) {
+            border-width: vwh(2px);
+        }
+
+        @media screen and (max-width: $screen-width-tablet) {
+            border-width: vwt(2px);
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            border-width: vwm(2px);
+        }
+    }
+
+    &__text {
+        max-width: vw(940px);
+
+        margin-bottom: vw(40px);
+
+        display: flex;
+
+        @media screen and (max-width: $screen-width-hd) {
+            margin-bottom: vwh(40px);
+            max-width: vwh(940px);
+        }
+
+        @media screen and (max-width: $screen-width-tablet) {
+            margin-bottom: vwt(40px);
+            max-width: unset;
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            margin-bottom: vwm(40px);
+        }
+
+        &-content {
+            padding-top: vw(28px);
+
+            @media screen and (max-width: $screen-width-hd) {
+                padding-top: vwh(28px);
+            }
+
+            @media screen and (max-width: $screen-width-tablet) {
+                padding-top: 0;
+            }
+        }
+    }
+
+    &__number {
+        display: inline-block;
+        white-space: nowrap;
+        color: $color-primary-100;
+        margin-right: vw(40px);
+
+        @media screen and (max-width: $screen-width-hd) {
+            margin-right: vwh(40px);
+        }
+        @media screen and (max-width: $screen-width-tablet) {
+            margin-right: vwt(16px);
+        }
+        @media screen and (max-width: $screen-width-mobile) {
+            margin-right: vwm(16px);
+        }
+
+        &--big {
+            @include number;
+        }
+
+        &--small {
+            @include h2;
+        }
+    }
+
+    &__description {
+        @include t1;
+        color: $color-gray-400;
+
+        max-width: vw(480px);
+
+        margin-bottom: vw(20px);
+
+        @media screen and (max-width: $screen-width-hd) {
+            max-width: vwh(480px);
+            margin-bottom: vwh(20px);
+        }
+
+        @media screen and (max-width: $screen-width-tablet) {
+            @include t2;
+            margin-bottom: vwt(12px);
+            max-width: unset;
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            margin-bottom: vwm(12px);
+        }
+    }
+
+    &__title {
+        @include h2;
+        color: $color-gray-600;
+    }
+
+    &__cards {
+        // display: grid;
+        display: flex;
+        gap: vw(20px);
+        align-items: center;
+
+        @media screen and (max-width: $screen-width-hd) {
+            gap: vwh(20px);
+        }
+        @media screen and (max-width: $screen-width-tablet) {
+            gap: vwt(16px);
+        }
+        @media screen and (max-width: $screen-width-mobile) {
+            gap: vwm(16px);
+        }
+    }
+
+    &__note {
+        @include h4;
+        cursor: auto;
+
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        user-select: none;
+        color: $color-primary-300;
+
+        border-radius: vw(8px);
+        margin-top: vw(20px);
+        padding: vw(40px);
+
+        @media screen and (max-width: $screen-width-hd) {
+            padding: vwh(40px);
+            margin-top: vwh(20px);
+            border-radius: vwh(8px);
+        }
+
+        @media screen and (max-width: $screen-width-tablet) {
+            padding: vwt(20px);
+            margin-top: vwt(16px);
+            border-radius: vwt(8px);
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            padding: vwm(20px);
+            margin-top: vwm(16px);
+            border-radius: vwm(8px);
+        }
+
+        background-color: $color-gray-200;
+    }
+
+    &__helper {
+        margin-top: vw(20px);
+        padding: vw(60px);
+        border-radius: vw(8px);
+        background-color: $color-gray-200;
+
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+            content: "";
+
+            position: absolute;
+
+            right: 0;
+            top: 0;
+
+            height: 100%;
+            width: vw(634px);
+            background: url("../img/step_5/notice_bg.png") no-repeat center;
+            background-size: cover;
+        }
+
+        @media screen and (max-width: $screen-width-hd) {
+            margin-top: vwh(20px);
+            padding: vwh(60px);
+            border-radius: vwh(8px);
+        }
+
+        @media screen and (max-width: $screen-width-tablet) {
+            margin-top: vwt(16px);
+
+            padding: vwt(40px) vwt(20px);
+            border-radius: vwt(8px);
+
+            &::before {
+                content: none;
+            }
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            margin-top: vwm(16px);
+
+            padding: vwm(40px) vwm(20px);
+            border-radius: vwm(8px);
+        }
+
+        width: 100%;
+
+        &-title {
+            @include h3;
+            color: $color-gray-600;
+
+            margin-bottom: vw(20px);
+
+            @media screen and (max-width: $screen-width-hd) {
+                margin-bottom: vwh(20px);
+            }
+
+            @media screen and (max-width: $screen-width-tablet) {
+                margin-bottom: vwt(20px);
+            }
+
+            @media screen and (max-width: $screen-width-mobile) {
+                margin-bottom: vwm(12px);
+            }
+        }
+        &-description {
+            @include t2;
+            color: $color-gray-400;
+            max-width: vw(700px);
+            margin-bottom: vw(40px);
+
+            &--bolder {
+                font-weight: 700;
+            }
+
+            @media screen and (max-width: $screen-width-hd) {
+                max-width: vwh(700px);
+                margin-bottom: vwh(40px);
+            }
+
+            @media screen and (max-width: $screen-width-tablet) {
+                width: 100%;
+                max-width: unset;
+                margin-bottom: vwt(40px);
+            }
+
+            @media screen and (max-width: $screen-width-mobile) {
+                margin-bottom: vwm(40px);
+            }
+        }
+        &-btn {
+            @include btn_main_filled_md;
+
+            @media screen and (max-width: $screen-width-mobile) {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    }
+}

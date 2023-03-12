@@ -1,0 +1,289 @@
+.presentation {
+    position: relative;
+    z-index: 101;
+    background-color: $color-gray-500;
+    &__inner {
+        padding: vw(40px) 0 vw(160px);
+
+        @media screen and (max-width: $screen-width-hd) {
+            padding: vwh(40px) 0 vwh(160px);
+        }
+
+        @media screen and (max-width: $screen-width-tablet) {
+            padding: vwt(40px) 0 vwt(80px);
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            padding: vwm(40px) 0 vwm(80px);
+        }
+    }
+    &__steps {
+        padding-bottom: vw(60px);
+        border-bottom: vw(2px) solid $color-gray-400;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: vw(20px);
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        @media screen and (max-width: $screen-width-hd) {
+            padding-bottom: vwh(60px);
+            gap: vwh(20px);
+            border-width: vwh(2px);
+        }
+
+        @media screen and (max-width: $screen-width-tablet) {
+            gap: vwt(12px);
+            padding-bottom: vwt(40px);
+            border-width: vwt(2px);
+            overflow-x: scroll;
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            gap: vwm(12px);
+            padding-bottom: vwm(40px);
+            border-width: vwm(2px);
+        }
+
+        &-item {
+            cursor: pointer;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            &:hover {
+                .presentation__steps-step {
+                    color: $color-light;
+                }
+            }
+
+            &--active {
+                border-color: $color-gray-300;
+
+                .presentation__steps-step {
+                    color: $color-gray-100 !important;
+                }
+            }
+
+            background-color: $color-gray-400;
+
+            width: vw(220px);
+            height: vw(189px);
+            border-radius: vw(8px);
+            border: vw(2px) solid transparent;
+
+            transition: all 200ms;
+            text-align: center;
+
+            @media screen and (max-width: $screen-width-hd) {
+                width: vwh(220px);
+                height: vwh(189px);
+                border-radius: vwh(8px);
+                border-width: vwh(2px);
+            }
+
+            @media screen and (max-width: $screen-width-tablet) {
+                min-width: vwt(140px);
+                border-width: vwt(2px);
+                border-radius: vwt(8px);
+            }
+
+            @media screen and (max-width: $screen-width-mobile) {
+                min-width: vwm(140px);
+                border-width: vwm(2px);
+                border-radius: vwm(8px);
+                height: vwm(107px);
+            }
+        }
+        &-step {
+            @include h1;
+            color: $color-gray-300;
+            transition: color 200ms;
+        }
+        &-title {
+            @include t3;
+            color: $color-gray-100;
+        }
+    }
+
+    &__image-wrapper {
+        border-radius: vw(8px);
+        width: vw(700px);
+        height: vw(440px);
+
+        @media screen and (max-width: $screen-width-hd) {
+            width: vwh(630px);
+            height: vwh(400px);
+            border-radius: vwh(8px);
+        }
+
+        @media screen and (max-width: $screen-width-tablet) {
+            width: vwt(342px);
+            height: vwt(216px);
+            border-radius: vwt(8px);
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            width: 100%;
+            height: vwm(216px);
+            border-radius: vwm(8px);
+            max-width: unset;
+        }
+
+        overflow: hidden;
+    }
+
+    &__imgage {
+    }
+
+    &__left {
+        flex: 1;
+    }
+
+    &__content {
+        display: none;
+        padding-top: vw(60px);
+
+        gap: vw(140px);
+
+        @media screen and (max-width: $screen-width-hd) {
+            padding-top: vw(60px);
+            gap: vw(70px);
+        }
+
+        @media screen and (max-width: $screen-width-tablet) {
+            padding-top: vwt(40px) !important;
+            gap: vwt(40px);
+        }
+        
+        @media screen and (max-width: $screen-width-mobile) {
+            flex-direction: column;
+            padding-top: vwm(40px) !important;
+            gap: vwm(40px);
+        }
+
+        &--active {
+            height: max-content;
+            padding-top: vw(60px);
+            opacity: 1;
+            display: flex;
+        }
+
+        transition: all 200ms;
+
+        &-step {
+            @include h2;
+            color: $color-gray-100;
+        }
+
+        &-title {
+            @include h3;
+            color: $color-light;
+
+            margin-bottom: vw(20px);
+
+            @media screen and (max-width: $screen-width-hd) {
+                margin-bottom: vwh(20px);
+            }
+
+            @media screen and (max-width: $screen-width-tablet) {
+                margin-bottom: vwt(12px);
+            }
+
+            @media screen and (max-width: $screen-width-mobile) {
+                margin-bottom: vwm(12px);
+            }
+        }
+
+        &-description {
+            @include t2;
+            color: $color-gray-100;
+
+            margin-bottom: vw(40px);
+
+            @media screen and (max-width: $screen-width-hd) {
+                margin-bottom: vwh(40px);
+            }
+
+            @media screen and (max-width: $screen-width-tablet) {
+                margin-bottom: vwt(40px);
+            }
+
+            @media screen and (max-width: $screen-width-mobile) {
+                margin-bottom: vwm(40px);
+            }
+        }
+
+        &-tags {
+            &-title {
+                margin-bottom: vw(12px);
+
+                @include t1_sb;
+                color: $color-gray-100;
+
+                @media screen and (max-width: $screen-width-hd) {
+                    margin-bottom: vwh(12px);
+                }
+
+                @media screen and (max-width: $screen-width-tablet) {
+                    @include t2_sb;
+                    margin-bottom: vwt(12px);
+                }
+
+                @media screen and (max-width: $screen-width-mobile) {
+                    margin-bottom: vwm(12px);
+                }
+            }
+            &-list {
+                display: flex;
+                flex-wrap: wrap;
+                gap: vw(12px);
+
+                @media screen and (max-width: $screen-width-hd) {
+                    gap: vwh(12px);
+                }
+
+                @media screen and (max-width: $screen-width-tablet) {
+                    gap: vwt(12px);
+                }
+
+                @media screen and (max-width: $screen-width-mobile) {
+                    gap: vwm(12px);
+                }
+            }
+            &-item {
+                @include t2;
+
+                cursor: default;
+
+                display: inline-block;
+                color: $color-gray-100;
+
+                border-radius: vw(4px);
+                padding: vw(8px) vw(12px);
+
+                @media screen and (max-width: $screen-width-hd) {
+                    padding: vwh(8px) vwh(12px);
+                    border-radius: vwh(4px);
+                }
+
+                @media screen and (max-width: $screen-width-tablet) {
+                    padding: vwt(8px) vwt(12px);
+                    border-radius: vwt(4px);
+                }
+
+                @media screen and (max-width: $screen-width-mobile) {
+                    padding: vwm(8px) vwm(12px);
+                    border-radius: vwm(4px);
+                }
+
+                background-color: $color-gray-400;
+            }
+        }
+    }
+}

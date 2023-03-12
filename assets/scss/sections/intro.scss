@@ -1,0 +1,244 @@
+.intro {
+    position: relative;
+    &__inner {
+        padding: vw(160px) 0;
+
+        @media screen and (max-width: $screen-width-hd) {
+            padding: vwh(160px) 0;
+        }
+
+        @media screen and (max-width: $screen-width-tablet) {
+            padding: vwt(80px) 0 vwt(40px);
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            padding: vwm(80px) 0 vwm(40px);
+        }
+    }
+
+    &__content {
+    }
+
+    &__text {
+        @media screen and (max-width: $screen-width-mobile) {
+            margin-bottom: vwm(20px);
+        }
+    }
+
+    &__title {
+        overflow: hidden;
+
+        padding: vw(60px) vw(40px) vw(60px) 0;
+        background-color: $color-gray-100;
+        display: inline-block;
+        border-radius: vw(8px);
+
+        @media screen and (max-width: $screen-width-hd) {
+            border-radius: vwh(8px);
+            padding: vwh(60px) vwh(40px) vwh(60px) 0;
+            border-radius: vwh(8px);
+            width: vwh(1180px);
+        }
+
+        @media screen and (max-width: $screen-width-tablet) {
+            border-radius: vwt(8px);
+            padding: vwt(20px) 0;
+            width: 100%;
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            padding: vwm(20px) 0;
+            border-radius: vwm(8px);
+        }
+
+        &-inner {
+            background-color: $color-gray-100;
+            width: vw(1180px);
+
+            @media screen and (max-width: $screen-width-hd) {
+                width: vwh(1180px);
+            }
+            @media screen and (max-width: $screen-width-tablet) {
+                width: 100%;
+            }
+        }
+
+        &-text {
+            @include h1;
+            display: contents;
+            &--colored {
+                color: $color-dark;
+            }
+        }
+    }
+
+    &__description {
+        max-width: vw(700px);
+        padding: 0 vw(40px) 0 0;
+
+        margin-bottom: vw(60px);
+
+        @media screen and (max-width: $screen-width-hd) {
+            padding: 0 vwh(40px) 0 0;
+            margin-bottom: vwh(60px);
+            max-width: vwh(700px);
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            max-width: 100%;
+        }
+
+        &-text {
+            @include t1;
+            color: $color-gray-400;
+
+            border-top: vw(2px) solid $color-gray-200;
+            padding: vw(20px) 0;
+
+            @media screen and (max-width: $screen-width-hd) {
+                padding: vwh(20px) 0;
+                border-width: vwh(2px);
+            }
+
+            @media screen and (max-width: $screen-width-tablet) {
+                padding: vwt(12px) 0;
+                border-width: vwt(2px);
+                @include t2;
+            }
+
+            @media screen and (max-width: $screen-width-mobile) {
+                padding: vwm(12px) 0;
+                border-width: vwm(2px);
+            }
+
+            &:last-child {
+                border-bottom: vw(2px) solid $color-gray-200;
+
+                @media screen and (max-width: $screen-width-hd) {
+                    border-width: vwh(2px);
+                }
+            }
+
+            &--bold {
+                @include t1_sb;
+                color: $color-dark;
+
+                @media screen and (max-width: $screen-width-tablet) {
+                    @include t2_sb;
+                }
+            }
+        }
+    }
+
+    &__decoration {
+        padding: vw(40px);
+        display: inline-flex;
+        justify-content: center;
+        max-width: vw(476px);
+        gap: vw(20px);
+        background-color: $color-gray-500;
+        border-radius: vw(8px);
+        align-items: center;
+
+        background: url("../img/intro/bg_decoration.png") no-repeat center;
+        background-size: contain;
+
+        @media screen and (max-width: $screen-width-hd) {
+            gap: vwh(20px);
+            padding: vwh(40px);
+            max-width: vwh(476px);
+            border-radius: vwh(8px);
+        }
+
+        @media screen and (max-width: $screen-width-tablet) {
+            background-image: url("../img/intro/bg_decoration_tablet.png");
+            gap: vwt(12px);
+            padding: vwt(40px);
+            max-width: vwt(360px);
+            border-radius: vwt(8px);
+            width: 100%;
+
+            flex-direction: column;
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            background-image: url("../img/intro/bg_decoration_mobile.png");
+            gap: vwm(12px);
+            padding: vwm(40px);
+            border-radius: vwm(8px);
+            width: 100%;
+            max-width: unset;
+            max-height: vwm(204px);
+            margin-top: vwm(40px);
+        }
+    }
+
+    &__btn-request {
+        @include btn_main_filled;
+        white-space: nowrap;
+
+        @media screen and (max-width: $screen-width-tablet) {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+
+    &__btn-next {
+        @include btn_main_outlined;
+        white-space: nowrap;
+        padding-right: vw(16px);
+
+        @media screen and (max-width: $screen-width-tablet) {
+            width: 100%;
+            justify-content: center;
+        }
+
+        svg {
+            width: vw(24px);
+            height: vw(24px);
+
+            @media screen and (max-width: $screen-width-hd) {
+                width: vwh(24px);
+                height: vwh(24px);
+            }
+
+            @media screen and (max-width: $screen-width-tablet) {
+                width: vwt(24px);
+                height: vwt(24px);
+            }
+
+            @media screen and (max-width: $screen-width-mobile) {
+                width: vwm(24px);
+                height: vwm(24px);
+            }
+        }
+    }
+
+    &__image {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+
+        width: vw(950px);
+        height: 100%;
+
+        @media screen and (max-width: $screen-width-hd) {
+            width: vwh(585px);
+        }
+
+        @media screen and (max-width: $screen-width-tablet) {
+            top: unset;
+            bottom: 0;
+            height: vwt(284px);
+            width: 100%;
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            height: vwm(284px);
+        }
+
+        &-bg {
+        }
+    }
+}

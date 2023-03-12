@@ -1,0 +1,173 @@
+.reviews {
+    position: relative;
+    overflow-x: hidden;
+    z-index: 101;
+    background-color: #fff;
+
+    &__inner {
+        padding: vw(160px) 0 vw(80px);
+
+        @media screen and (max-width: $screen-width-hd) {
+            padding: vwh(160px) 0 vwh(80px);
+        }
+
+        @media screen and (max-width: $screen-width-tablet) {
+            padding: vwt(80px) 0 vwt(40px);
+        }
+        
+        @media screen and (max-width: $screen-width-mobile) {
+            padding: vwm(80px) 0 vwm(40px);
+        }
+    }
+
+    &__head {
+        margin-bottom: vw(60px);
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media screen and (max-width: $screen-width-hd) {
+            margin-bottom: vwh(60px);
+        }
+
+        @media screen and (max-width: $screen-width-tablet) {
+            margin-bottom: vwt(40px);
+        }
+        @media screen and (max-width: $screen-width-mobile) {
+            margin-bottom: vwm(40px);
+        }
+    }
+
+    &__slider {
+        position: relative;
+        padding: 0 0 0 vw(20px);
+        margin-left: vw(-20px);
+        overflow-x: hidden;
+        --shift: calc(100vw / 2 - 72vw / 2);
+        margin-right: calc(var(--shift) * -1);
+        width: calc(100% + var(--shift));
+
+        .swiper-slide-prev {
+            .card-review {
+                opacity: 0;
+            }
+        }
+
+        @media screen and (max-width: 1401px) {
+            padding: 0 0 0 vwh(20px);
+            margin-left: vwh(-20px);
+            --shift: calc(100vw / 2 - 90vw / 2);
+            margin-right: calc(var(--shift) * -1);
+            width: calc(100% + var(--shift));
+        }
+
+        @media screen and (max-width: 991px) {
+            padding: 0 0 0 vwt(20px);
+            margin-left: vwt(-20px);
+            margin-right: vwt(-16px);
+            width: 100vw;
+        }
+
+        @media screen and (max-width: 576px) {
+            padding: 0 0 0 vwm(20px);
+            margin-left: vwm(-20px);
+            margin-right: vwm(-16px);
+            width: 100vw;
+        }
+    }
+
+    .card-review {
+        transition: all 200ms;
+        opacity: 1;
+    }
+
+    &__slider-controls {
+        display: flex;
+        align-items: center;
+
+        gap: vw(12px);
+
+        @media screen and (max-width: $screen-width-hd) {
+            gap: vwh(12px);
+        }
+
+        @media screen and (max-width: $screen-width-tablet) {
+            gap: vwt(12px);
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            gap: vwm(12px);
+        }
+
+        &--mobile {
+            display: none;
+            margin-top: vwm(20px);
+
+            @media screen and (max-width: $screen-width-mobile) {
+                display: flex;
+                justify-content: center;
+                gap: vwm(12px);
+            }
+        }
+    }
+
+    &__slider-prev {
+        @include btn_arrow_left;
+
+        box-shadow: 0px 0px vw(20px) rgba(25, 25, 25, 0.1);
+
+        @media screen and (max-width: $screen-width-hd) {
+            box-shadow: 0px 0px vwh(20px) rgba(25, 25, 25, 0.1);
+        }
+
+        @media screen and (max-width: $screen-width-tablet) {
+            box-shadow: 0px 0px vwt(20px) rgba(25, 25, 25, 0.1);
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            box-shadow: 0px 0px vwm(20px) rgba(25, 25, 25, 0.1);
+        }
+    }
+    &__slider-next {
+        @include btn_arrow_right;
+
+        box-shadow: 0px 0px vw(20px) rgba(25, 25, 25, 0.1);
+
+        @media screen and (max-width: $screen-width-hd) {
+            box-shadow: 0px 0px vwh(20px) rgba(25, 25, 25, 0.1);
+        }
+
+        @media screen and (max-width: $screen-width-tablet) {
+            box-shadow: 0px 0px vwt(20px) rgba(25, 25, 25, 0.1);
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            box-shadow: 0px 0px vwm(20px) rgba(25, 25, 25, 0.1);
+        }
+    }
+
+    &__slider-controls {
+        @media screen and (max-width: $screen-width-tablet) {
+            display: none;
+        }
+    }
+
+    &__title {
+        @include h2;
+        color: $color-gray-500;
+        max-width: vw(700px);
+
+        @media screen and (max-width: $screen-width-tablet) {
+            max-width: vwt(360px);
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            max-width: 100%;
+        }
+
+        &--colored {
+            color: $color-dark;
+        }
+    }
+}

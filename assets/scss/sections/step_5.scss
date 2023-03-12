@@ -1,0 +1,32 @@
+#step-5 {
+    .step__inner {
+        padding: vw(80px) 0 vw(160px);
+
+        @media screen and (max-width: $screen-width-hd) {
+            padding: vwh(80px) 0 vwh(160px);
+        }
+        
+        @media screen and (max-width: $screen-width-tablet) {
+            padding: vwt(40px) 0 vwt(80px);
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            padding: vwm(40px) 0 vwm(80px);
+        }
+    }
+    .step__note {
+        text-align: center;
+    }
+    .step__cards {
+        grid-template-columns: repeat(2, 1fr);
+
+        @media screen and (max-width: $screen-width-tablet) {
+            display: grid;
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            grid-template-columns: 1fr;
+            gap: vwm(20px);
+        }
+    }
+}

@@ -1,0 +1,36 @@
+#step-2 {
+    .step__inner {
+        padding: vw(80px) 0 vw(160px);
+
+        @media screen and (max-width: $screen-width-hd) {
+            padding: vwh(80px) 0 vwh(160px);
+        }
+        
+        @media screen and (max-width: $screen-width-tablet) {
+            padding: vwt(40px) 0 vwt(80px);
+        }
+        
+        @media screen and (max-width: $screen-width-mobile) {
+            padding: vwm(40px) 0 vwm(80px);
+        }
+    }
+
+    .step__cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: vw(20px);
+
+        @media screen and (max-width: $screen-width-hd) {
+            gap: vwh(20px);
+        }
+
+        @media screen and (max-width: $screen-width-tablet) {
+            gap: vwt(16px);
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            grid-template-columns: 1fr;
+            gap: vwm(16px);
+        }
+    }
+}

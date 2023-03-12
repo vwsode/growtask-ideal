@@ -1,0 +1,177 @@
+.promotion-card {
+    cursor: pointer;
+    padding: vw(60px);
+    border-radius: vw(8px);
+    box-shadow: 0px 0px vw(20px) rgba(25, 25, 25, 0.1);
+    border: vw(2px) solid transparent;
+
+    position: relative;
+
+    transition: all 200ms;
+
+    width: vw(700px);
+
+    &--active {
+        background-color: $color-gray-400;
+
+        .promotion-card__title {
+            color: $color-primary-200;
+        }
+
+        .promotion-card__description {
+            color: $color-gray-100;
+        }
+
+        .promotion-card__image {
+            filter: grayscale(0) !important;
+        }
+
+        .promotion-card__price {
+            background-color: $color-gray-600;
+        }
+
+        .promotion-card__price-title {
+            color: $color-primary-200;
+        }
+        .promotion-card__price-description {
+            color: $color-gray-100;
+        }
+    }
+
+    &:hover {
+        border-color: $color-primary-200;
+        box-shadow: none;
+
+        .promotion-card__image {
+            filter: grayscale(0);
+        }
+    }
+
+    @media screen and (max-width: $screen-width-hd) {
+        width: vwh(700px);
+        box-shadow: 0px 0px vwh(20px) rgba(25, 25, 25, 0.1);
+        border-width: vwh(2px);
+        padding: vwh(60px);
+        border-radius: vwh(8px);
+    }
+
+    @media screen and (max-width: $screen-width-tablet) {
+        width: 100%;
+        height: 100%;
+        border-radius: vwt(8px);
+        padding: vwt(20px);
+        box-shadow: 0px 0px vwt(20px) rgba(25, 25, 25, 0.1);
+    }
+    
+    @media screen and (max-width: $screen-width-mobile) {
+        border-radius: vwm(8px);
+        border-width: vwm(2px);
+        padding: vwm(20px);
+    }
+
+    &__text {
+        max-width: vw(380px);
+
+        @media screen and (max-width: $screen-width-hd) {
+            max-width: vwh(380px);
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            max-width: vwm(200px);
+        }
+    }
+
+    &__image {
+        transition: filter 200ms;
+        filter: grayscale(1);
+    }
+
+    &__image-wrapper {
+        top: 0;
+        right: 0;
+        position: absolute;
+        height: 100%;
+        width: vw(220px);
+
+        @media screen and (max-width: $screen-width-hd) {
+            width: vwh(220px);
+        }
+
+        @media screen and (max-width: $screen-width-tablet) {
+            width: vwt(100px);
+            bottom: 0;
+            height: unset;
+            top: unset;
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            width: vwm(100px);
+        }
+    }
+
+    &__title {
+        @include h4;
+        color: $color-gray-500;
+        margin-bottom: vw(12px);
+
+        @media screen and (max-width: $screen-width-hd) {
+            margin-bottom: vwh(12px);
+        }
+
+        @media screen and (max-width: $screen-width-tablet) {
+            margin-bottom: vwt(12px);
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            margin-bottom: vwm(12px);
+        }
+    }
+    &__description {
+        @include t2;
+        color: $color-gray-400;
+        margin-bottom: vw(55px);
+
+        @media screen and (max-width: $screen-width-hd) {
+            margin-bottom: vwh(55px);
+        }
+
+        @media screen and (max-width: $screen-width-tablet) {
+            margin-bottom: vwt(40px);
+            @include t3;
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            margin-bottom: vwm(40px);
+        }
+    }
+    &__price {
+        display: inline-block;
+        padding: vw(12px) vw(20px);
+        border-radius: vw(8px);
+        background-color: $color-gray-200;
+
+        @media screen and (max-width: $screen-width-hd) {
+            padding: vwh(12px) vwh(20px);
+            border-radius: vwh(8px);
+        }
+
+        @media screen and (max-width: $screen-width-tablet) {
+            padding: vwt(12px) vwt(12px);
+            border-radius: vwt(8px);
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            padding: vwm(12px) vwm(12px);
+            border-radius: vwm(8px);
+        }
+
+        &-title {
+            @include h2;
+            color: $color-primary-300;
+        }
+        &-description {
+            @include t3;
+            color: $color-gray-300;
+        }
+    }
+}

@@ -1,0 +1,153 @@
+.accordion {
+    cursor: pointer;
+
+    background-color: $color-gray-200;
+
+    border-radius: vw(8px);
+
+    @media screen and (max-width: $screen-width-hd) {
+        border-radius: vwh(8px);
+    }
+    @media screen and (max-width: $screen-width-tablet) {
+        border-radius: vwt(8px);
+    }
+    @media screen and (max-width: $screen-width-mobile) {
+        border-radius: vwm(8px);
+    }
+
+    &.accordion--active {
+        .accordion__btn::before {
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+        .accordion__content {
+            padding: vw(12px) vw(12px) vw(40px) vw(24px);
+            opacity: 1;
+            height: fit-content;
+
+            @media screen and (max-width: $screen-width-hd) {
+                padding: vwh(12px) vwh(24px) vwh(40px) vwh(24px);
+            }
+            @media screen and (max-width: $screen-width-tablet) {
+                padding: vwt(12px) vwt(24px) vwt(40px) vwt(24px);
+            }
+            @media screen and (max-width: $screen-width-mobile) {
+                padding: vwm(12px) vwm(24px) vwm(40px) vwm(24px);
+            }
+        }
+    }
+
+    &:hover {
+        .accordion__title {
+            color: $color-light;
+        }
+    }
+
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: vw(72px);
+
+        padding: vw(12px) vw(12px) vw(12px) vw(24px);
+
+        @media screen and (max-width: $screen-width-hd) {
+            padding: vwh(12px) vwh(12px) vwh(12px) vwh(24px);
+            height: vwh(72px);
+        }
+        @media screen and (max-width: $screen-width-tablet) {
+            padding: vwt(12px) vwt(12px) vwt(12px) vwt(24px);
+            height: vwt(72px);
+        }
+        @media screen and (max-width: $screen-width-mobile) {
+            padding: vwm(12px) vwm(12px) vwm(12px) vwm(24px);
+            height: vwm(72px);
+        }
+    }
+    &__title {
+        @include t2_sb;
+        transition: color 200ms;
+        flex: 1;
+    }
+    &__btn {
+        @include btn_main_filled;
+        position: relative;
+
+        &::before {
+            content: "";
+
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            transition: all 200ms;
+            transform: translate(-50%, -50%);
+
+            background-image: url("../img/icons/icon-plus.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            width: vw(24px);
+            height: vw(24px);
+
+            @media screen and (max-width: $screen-width-hd) {
+                width: vwh(24px);
+                height: vwh(24px);
+            }
+            @media screen and (max-width: $screen-width-tablet) {
+                width: vwt(24px);
+                height: vwt(24px);
+            }
+            @media screen and (max-width: $screen-width-mobile) {
+                width: vwm(24px);
+                height: vwm(24px);
+            }
+        }
+
+        width: vw(48px);
+        height: vw(48px);
+        padding: vw(17px) !important;
+
+        @media screen and (max-width: $screen-width-hd) {
+            width: vwh(48px);
+            height: vwh(48px);
+            padding: vwh(17px) !important;
+        }
+
+        @media screen and (max-width: $screen-width-tablet) {
+            width: vwt(48px);
+            height: vwt(48px);
+            padding: vwt(17px) !important;
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            width: vwm(48px);
+            height: vwm(48px);
+            background-size: vwm(24px);
+            padding: vwm(17px) !important;
+        }
+    }
+    &__content {
+        @include t2;
+
+        pointer-events: none;
+
+        height: 0;
+        padding: 0;
+        opacity: 0;
+
+        padding: 0 vw(12px) 0 vw(24px);
+
+        @media screen and (max-width: $screen-width-hd) {
+            padding: 0 vwh(24px) 0 vwh(24px);
+        }
+        @media screen and (max-width: $screen-width-tablet) {
+            padding: 0 vwt(24px) 0 vwt(24px);
+        }
+        @media screen and (max-width: $screen-width-mobile) {
+            padding: 0 vwm(24px) 0 vwm(24px);
+        }
+
+        transition: all 200ms;
+    }
+}

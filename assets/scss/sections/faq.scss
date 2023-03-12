@@ -1,0 +1,50 @@
+.faq {
+    background-color: $color-gray-100;
+    position: relative;
+    z-index: 101;
+
+    &__inner {
+        padding: vw(80px) 0 vw(160px);
+
+        @media screen and (max-width: $screen-width-tablet) {
+            padding: vwt(40px) 0 vwt(80px);
+        }
+        @media screen and (max-width: $screen-width-mobile) {
+            padding: vwm(40px) 0 vwm(80px);
+        }
+    }
+
+    &__title {
+        @include h2;
+        color: $color-gray-500;
+        margin-bottom: vw(60px);
+
+        @media screen and (max-width: $screen-width-hd) {
+            margin-bottom: vwh(60px);
+        }
+
+        @media screen and (max-width: $screen-width-tablet) {
+            margin-bottom: vwt(40px);
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            margin-bottom: vwm(40px);
+        }
+    }
+
+    &__questions {
+        display: flex;
+        flex-direction: column;
+        gap: vw(20px);
+
+        @media screen and (max-width: $screen-width-hd) {
+            gap: vwh(20px);
+        }
+        @media screen and (max-width: $screen-width-tablet) {
+            gap: vwt(16px);
+        }
+        @media screen and (max-width: $screen-width-mobile) {
+            gap: vwm(16px);
+        }
+    }
+}

@@ -1,0 +1,39 @@
+#step-1 {
+    .step__inner {
+        padding: vw(160px) 0 vw(80px);
+
+        @media screen and (max-width: $screen-width-hd) {
+            padding: vwh(160px) 0 vwh(80px);
+        }
+
+        @media screen and (max-width: $screen-width-tablet) {
+            padding: vwt(80px) 0 vwt(40px);
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            padding: vwm(80px) 0 vwm(40px);
+        }
+    }
+
+    .step__cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: vw(20px);
+
+        @media screen and (max-width: $screen-width-hd) {
+            gap: vwh(20px);
+        }
+        @media screen and (max-width: $screen-width-tablet) {
+            gap: vwt(16px);
+            grid-template-columns: 1fr 1fr;
+        }
+        @media screen and (max-width: $screen-width-mobile) {
+            gap: vwm(16px);
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .step__note {
+        text-align: center;
+    }
+}

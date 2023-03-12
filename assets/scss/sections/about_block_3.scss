@@ -1,0 +1,23 @@
+#about-3.about {
+    position: relative;
+    z-index: 101;
+    .about__inner {
+        padding: vw(80px) 0 vw(40px);
+
+        @media screen and (max-width: $screen-width-hd) {
+            padding: vwh(80px) 0 vwh(40px);
+        }
+
+        @media screen and (max-width: $screen-width-tablet) {
+            padding: vwt(40px) 0 vwt(20px);
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            padding: vwm(40px) 0 vwm(20px);
+        }
+    }
+
+    &::before {
+        content: unset;
+    }
+}

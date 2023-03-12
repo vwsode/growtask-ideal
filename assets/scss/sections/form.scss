@@ -1,0 +1,303 @@
+.form {
+    background-color: $color-gray-400;
+
+    padding: vw(60px);
+    border-radius: vw(8px);
+
+    @media screen and (max-width: $screen-width-hd) {
+        padding: vwh(60px);
+        border-radius: vwh(8px);
+    }
+
+    @media screen and (max-width: $screen-width-tablet) {
+        padding: vwt(20px);
+        border-radius: vwt(8px);
+    }
+
+    @media screen and (max-width: $screen-width-mobile) {
+        padding: vwm(20px);
+        border-radius: vwm(8px);
+    }
+
+    &__title {
+        @include h4;
+        color: $color-gray-100;
+
+        margin-bottom: vw(40px);
+
+        @media screen and (max-width: $screen-width-hd) {
+            margin-bottom: vwh(40px);
+        }
+
+        @media screen and (max-width: $screen-width-tablet) {
+            margin-bottom: vwt(20px);
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            margin-bottom: vwm(20px);
+        }
+
+        &--colored {
+            color: $color-light;
+        }
+    }
+
+    &__btn-submit {
+        @include btn_main_filled;
+
+        @media screen and (max-width: $screen-width-tablet) {
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &-input__name {
+        @include input_text;
+    }
+    &-input__tel {
+        @include input_text;
+    }
+    &-input__message {
+        @include input_text;
+        height: vw(168px);
+
+        @media screen and (max-width: $screen-width-hd) {
+            height: vwh(160px);
+        }
+
+        @media screen and (max-width: $screen-width-tablet) {
+            height: vwt(160px);
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            height: vwm(160px);
+        }
+
+        resize: none;
+    }
+
+    &__fields {
+        display: flex;
+        flex-direction: column;
+        gap: vw(12px);
+
+        @media screen and (max-width: $screen-width-hd) {
+            gap: vwh(12px);
+        }
+
+        @media screen and (max-width: $screen-width-tablet) {
+            gap: vwt(12px);
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            gap: vwm(12px);
+        }
+    }
+    &__bid {
+        padding: vw(20px) 0;
+
+        display: flex;
+        gap: vw(20px);
+
+        @media screen and (max-width: $screen-width-hd) {
+            padding: vwh(20px) 0;
+            gap: vwh(20px);
+        }
+
+        @media screen and (max-width: $screen-width-tablet) {
+            padding: vwt(20px) 0;
+            gap: vwt(20px);
+            flex-direction: column;
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            padding: vwm(20px) 0;
+            gap: vwm(20px);
+        }
+    }
+
+    &__privacy {
+        flex: 1;
+
+        cursor: pointer;
+
+        display: flex;
+
+        gap: vw(8px);
+
+        @media screen and (max-width: $screen-width-hd) {
+            gap: vwh(8px);
+        }
+
+        @media screen and (max-width: $screen-width-tablet) {
+            gap: vwt(8px);
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            gap: vwm(8px);
+        }
+
+        &-link {
+            text-decoration: none;
+            @include link;
+
+            color: $color-gray-300;
+        }
+
+        &-text {
+            @include t2;
+            color: $color-gray-300;
+        }
+
+        &-checkbox {
+            @include input_checkbox;
+        }
+    }
+
+    &__contacts {
+        padding-top: vw(20px);
+        border-top: vw(2px) solid $color-gray-500;
+
+        @media screen and (max-width: $screen-width-hd) {
+            padding-top: vwh(20px);
+            border-width: vwh(2px);
+        }
+
+        @media screen and (max-width: $screen-width-tablet) {
+            padding-top: vwt(20px);
+            border-width: vwt(2px);
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            padding-top: vwm(20px);
+            border-width: vwm(2px);
+        }
+
+        &-tg {
+            @include btn_vk;
+        }
+        &-vk {
+            @include btn_tg;
+        }
+
+        &-top {
+            margin-bottom: vw(20px);
+
+            @media screen and (max-width: $screen-width-hd) {
+                margin-bottom: vwh(20px);
+            }
+        }
+        &-mid {
+            display: flex;
+            align-items: center;
+
+            margin-bottom: vw(6px);
+
+            @media screen and (max-width: $screen-width-hd) {
+                margin-bottom: vwh(6px);
+            }
+        }
+        &-bot {
+        }
+
+        &-text {
+            @include t1_sb;
+            color: $color-gray-300;
+            margin-bottom: vw(20px);
+
+            @media screen and (max-width: $screen-width-hd) {
+                margin-bottom: vwh(20px);
+            }
+
+            @media screen and (max-width: $screen-width-tablet) {
+                margin-bottom: vwt(12px);
+                @include t2_sb;
+            }
+
+            @media screen and (max-width: $screen-width-tablet) {
+                margin-bottom: vwm(12px);
+            }
+        }
+
+        &-tel {
+            @include h2;
+            color: $color-gray-100;
+
+            padding-right: vw(20px);
+            border-right: vw(2px) solid $color-gray-500;
+
+            @media screen and (max-width: $screen-width-hd) {
+                padding-right: vwh(20px);
+                border-right: vwh(2px) solid $color-gray-500;
+            }
+
+            @media screen and (max-width: $screen-width-tablet) {
+                padding-right: 0;
+                border-right: none;
+            }
+
+            @media screen and (max-width: $screen-width-mobile) {
+                border-width: vwm(2px);
+            }
+        }
+        &-mail {
+            @include t1_sb;
+            color: $color-gray-100;
+
+            
+            @media screen and (max-width: $screen-width-tablet) {
+                display: block;
+                padding-bottom: vwt(18px);
+                border-bottom: vwt(2px) solid $color-gray-500;
+            }
+
+            @media screen and (max-width: $screen-width-mobile) {
+                padding-bottom: vwm(18px);
+                border-width: vwm(2px);
+            }
+        }
+
+        &-socials {
+            display: flex;
+            align-items: center;
+            gap: vw(12px);
+
+            padding-left: vw(20px);
+
+            @media screen and (max-width: $screen-width-tablet) {
+                gap: vwh(12px);
+                padding-left: vwh(20px);
+            }
+
+            @media screen and (max-width: $screen-width-tablet) {
+                gap: vwt(12px);
+                padding-left: vwt(20px);
+
+                display: none;
+            }
+
+            @media screen and (max-width: $screen-width-mobile) {
+                gap: vwm(12px);
+                padding-left: vwm(20px);
+            }
+
+            &--mobile {
+                display: none;
+
+                @media screen and (max-width: $screen-width-tablet) {
+                    gap: vwt(12px);
+                    display: flex;
+                    padding-top: vwt(12px);
+                }
+
+                @media screen and (max-width: $screen-width-mobile) {
+                    padding-top: vwm(12px);
+                    gap: vwm(12px);
+                }
+            }
+        }
+        &-btn {
+        }
+    }
+}

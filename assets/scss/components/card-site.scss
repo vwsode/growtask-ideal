@@ -1,0 +1,130 @@
+.card-site {
+    box-shadow: 0px 0px vw(20px) rgba(25, 25, 25, 0.1);
+    border: vw(2px) solid transparent;
+    border-radius: vw(8px);
+    padding: vw(120px) vw(60px);
+    max-width: vw(700px);
+    height: vw(360px);
+    width: 100%;
+
+    @media screen and (max-width: $screen-width-hd) {
+        box-shadow: 0px 0px vwh(20px) rgba(25, 25, 25, 0.1);
+        border-radius: vwh(8px);
+        padding: vwh(120px) vwh(60px);
+        max-width: vwh(700px);
+        height: vwh(360px);
+        border: vwh(2px) solid transparent;
+    }
+
+    @media screen and (max-width: $screen-width-tablet) {
+        box-shadow: 0px 0px vwt(20px) rgba(25, 25, 25, 0.1);
+        border-radius: vwt(8px);
+        padding: vwt(40px) vwt(20px);
+        max-width: vwt(700px);
+        height: 100%;
+        border: vwt(2px) solid transparent;
+    }
+
+    @media screen and (max-width: $screen-width-mobile) {
+        box-shadow: 0px 0px vwm(20px) rgba(25, 25, 25, 0.1);
+        border-radius: vwm(8px);
+        padding: vwm(40px) vwm(20px);
+        max-width: vwm(700px);
+        height: 100%;
+        border: vwm(2px) solid transparent;
+    }
+
+    display: flex;
+
+    transition: all 200ms;
+
+    position: relative;
+
+    overflow: hidden;
+    cursor: pointer;
+
+    &--active {
+        background-color: $color-gray-400;
+
+        .card-site__title {
+            color: $color-primary-200;
+        }
+
+        .card-site__description {
+            color: $color-gray-100;
+        }
+
+        .card-site__image img {
+            filter: grayscale(0) !important;
+        }
+    }
+
+    &:hover {
+        border-color: $color-primary-200;
+
+        .card-site__image img {
+            filter: grayscale(0);
+        }
+    }
+
+    &__text {
+        max-width: vw(400px);
+
+        @media screen and (max-width: $screen-width-hd) {
+            max-width: vwh(328px);
+        }
+
+        @media screen and (max-width: $screen-width-tablet) {
+            max-width: vwt(220px);
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            max-width: vwm(202px);
+        }
+    }
+    &__title {
+        @include h4;
+        color: $color-gray-500;
+
+        margin-bottom: vw(20px);
+
+        @media screen and (max-width: $screen-width-hd) {
+            margin-bottom: vwh(20px);
+        }
+
+        @media screen and (max-width: $screen-width-tablet) {
+            margin-bottom: vwt(20px);
+        }
+    }
+    &__description {
+        @include t2;
+        color: $color-gray-400;
+
+        @media screen and (max-width: $screen-width-tablet) {
+            @include t3;
+            // max-width: vwt(220px);
+        }
+    }
+    &__image {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+
+        @media screen and (max-width: $screen-width-tablet) {
+            width: vwt(100px);
+            height: auto;
+            bottom: 0;
+            top: unset;
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            width: vwm(100px);
+        }
+
+        img {
+            transition: all 200ms;
+            filter: grayscale(1);
+        }
+    }
+}

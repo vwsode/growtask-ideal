@@ -1,0 +1,833 @@
+// 888888888888                                                                         88
+//      88                                                                              88
+//      88                                                                              88
+//      88  8b       d8  8b,dPPYba,    ,adPPYb,d8  8b,dPPYba,  ,adPPYYba,  8b,dPPYba,   88,dPPYba,   8b       d8
+//      88  `8b     d8'  88P'    "8a  a8"    `Y88  88P'   "Y8  ""     `Y8  88P'    "8a  88P'    "8a  `8b     d8'
+//      88   `8b   d8'   88       d8  8b       88  88          ,adPPPPP88  88       d8  88       88   `8b   d8'
+//      88    `8b,d8'    88b,   ,a8"  "8a,   ,d88  88          88,    ,88  88b,   ,a8"  88       88    `8b,d8'
+//      88      Y88'     88`YbbdP"'    `"YbbdP"Y8  88          `"8bbdP"Y8  88`YbbdP"'   88       88      Y88'
+//              d8'      88            aa,    ,88                          88                            d8'
+//             d8'       88             "Y8bbdP"                           88                           d8'
+
+// Headings
+
+@mixin h1 {
+    font-family: "Gogh";
+    font-size: vw(84px);
+    font-weight: $fw-extra-bold;
+    line-height: 100%;
+    text-transform: uppercase;
+
+    @media screen and (max-width: $screen-width-hd) {
+        font-size: vwh(84px);
+    }
+
+    @media screen and (max-width: $screen-width-tablet) {
+        font-size: vwt(42px);
+    }
+
+    @media screen and (max-width: $screen-width-mobile) {
+        font-size: vwm(41px);
+    }
+}
+
+@mixin h2 {
+    font-family: "Gogh";
+    font-weight: 800;
+    font-size: vw(40px);
+    line-height: 100%;
+
+    @media screen and (max-width: $screen-width-hd) {
+        font-size: vwh(40px);
+    }
+
+    @media screen and (max-width: $screen-width-tablet) {
+        font-size: vwt(28px);
+    }
+
+    @media screen and (max-width: $screen-width-mobile) {
+        font-size: vwm(28px);
+    }
+}
+
+@mixin h3 {
+    font-family: "Gogh";
+    font-weight: 800;
+    font-size: vw(32px);
+    line-height: 100%;
+
+    @media screen and (max-width: $screen-width-hd) {
+        font-size: vwh(28px);
+    }
+
+    @media screen and (max-width: $screen-width-tablet) {
+        font-size: vwt(24px);
+    }
+
+    @media screen and (max-width: $screen-width-mobile) {
+        font-size: vwm(24px);
+    }
+}
+
+@mixin h4 {
+    font-family: "Gogh";
+    font-weight: 800;
+    font-size: vw(28px);
+    line-height: 100%;
+
+    @media screen and (max-width: $screen-width-hd) {
+        font-size: vwh(28px);
+    }
+
+    @media screen and (max-width: $screen-width-tablet) {
+        font-size: vwt(20px);
+    }
+
+    @media screen and (max-width: $screen-width-mobile) {
+        font-size: vwm(20px);
+    }
+}
+
+@mixin number {
+    font-family: "Gogh";
+    font-style: normal;
+    font-weight: 800;
+    font-size: vw(240px);
+    line-height: 100%;
+
+    @media screen and (max-width: $screen-width-hd) {
+        font-size: vwh(240px);
+    }
+
+    @media screen and (max-width: $screen-width-tablet) {
+        font-size: vwt(56px);
+    }
+
+    @media screen and (max-width: $screen-width-mobile) {
+        font-size: vwm(56px);
+    }
+}
+
+// Paragraphs
+
+@mixin t1 {
+    font-family: "Raleway";
+    font-weight: 400;
+    font-size: vw(20px);
+    line-height: 150%;
+
+    @media screen and (max-width: $screen-width-hd) {
+        font-size: vwh(20px);
+    }
+
+    @media screen and (max-width: $screen-width-tablet) {
+        font-size: vwt(20px);
+    }
+
+    @media screen and (max-width: $screen-width-mobile) {
+        font-size: vwm(20px);
+    }
+}
+
+@mixin t1_sb {
+    font-family: "Raleway";
+    font-weight: 600;
+    font-size: vw(20px);
+    line-height: 150%;
+
+    @media screen and (max-width: $screen-width-hd) {
+        font-size: vwh(20px);
+    }
+
+    @media screen and (max-width: $screen-width-tablet) {
+        font-size: vwt(20px);
+    }
+
+    @media screen and (max-width: $screen-width-mobile) {
+        font-size: vwm(20px);
+    }
+}
+
+@mixin t2 {
+    font-family: "Raleway";
+    font-weight: 400;
+    font-size: vw(16px);
+    line-height: 150%;
+
+    @media screen and (max-width: $screen-width-hd) {
+        font-size: vwh(16px);
+    }
+
+    @media screen and (max-width: $screen-width-tablet) {
+        font-size: vwt(16px);
+    }
+
+    @media screen and (max-width: $screen-width-mobile) {
+        font-size: vwm(16px);
+    }
+}
+
+@mixin t2_sb {
+    font-family: "Raleway";
+    font-weight: 600;
+    font-size: vw(16px);
+    line-height: 150%;
+
+    @media screen and (max-width: $screen-width-hd) {
+        font-size: vwh(16px);
+    }
+
+    @media screen and (max-width: $screen-width-tablet) {
+        font-size: vwt(16px);
+    }
+
+    @media screen and (max-width: $screen-width-mobile) {
+        font-size: vwm(16px);
+    }
+}
+
+@mixin t3 {
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 400;
+    font-size: vw(14px);
+    line-height: 150%;
+
+    @media screen and (max-width: $screen-width-hd) {
+        font-size: vwh(14px);
+    }
+
+    @media screen and (max-width: $screen-width-tablet) {
+        font-size: vwt(14px);
+    }
+
+    @media screen and (max-width: $screen-width-mobile) {
+        font-size: vwm(14px);
+    }
+}
+
+@mixin t3_b {
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 700;
+    font-size: vw(14px);
+    line-height: 150%;
+
+    @media screen and (max-width: $screen-width-hd) {
+        font-size: vwh(14px);
+    }
+
+    @media screen and (max-width: $screen-width-tablet) {
+        font-size: vwt(14px);
+    }
+
+    @media screen and (max-width: $screen-width-mobile) {
+        font-size: vwm(14px);
+    }
+}
+
+// 88888888ba
+// 88      "8b                 ,d       ,d
+// 88      ,8P                 88       88
+// 88aaaaaa8P'  88       88  MM88MMM  MM88MMM  ,adPPYba,   8b,dPPYba,   ,adPPYba,
+// 88""""""8b,  88       88    88       88    a8"     "8a  88P'   `"8a  I8[    ""
+// 88      `8b  88       88    88       88    8b       d8  88       88   `"Y8ba,
+// 88      a8P  "8a,   ,a88    88,      88,   "8a,   ,a8"  88       88  aa    ]8I
+// 88888888P"    `"YbbdP'Y8    "Y888    "Y888  `"YbbdP"'   88       88  `"YbbdP"'
+
+@mixin btn_main_filled {
+    padding: vw(16px) vw(24px);
+    border-radius: vw(4px);
+
+    display: flex;
+    align-items: center;
+    gap: vw(8px);
+    border: vw(2px) solid transparent;
+
+    @include t2_sb;
+
+
+    background-color: $color-main;
+    color: $color-gray-100;
+
+    transition: all 200ms;
+
+    &:hover {
+        background-color: $color-light;
+    }
+
+    &:active {
+        background-color: $color-dark;
+    }
+
+    @media screen and (max-width: $screen-width-hd) {
+        padding: vwh(16px) vwh(24px);
+        border-radius: vwh(4px);
+        gap: vwh(8px);
+        border-width: vwh(2px);
+    }
+
+    @media screen and (max-width: $screen-width-tablet) {
+        padding: vwt(16px) vwt(24px);
+        border-radius: vwt(4px);
+        gap: vwt(8px);
+        border-width: vwt(2px);
+    }
+
+    @media screen and (max-width: $screen-width-mobile) {
+        padding: vwm(16px) vwm(24px);
+        border-radius: vwm(4px);
+        gap: vwm(8px);
+        border-width: vwm(2px);
+    }
+}
+
+@mixin btn_main_filled_md {
+    @include t3_b;
+
+    padding: vw(13.5px) vw(20px);
+    border-radius: vw(4px);
+
+    background-color: $color-main;
+    color: $color-gray-100;
+
+    display: flex;
+    align-items: center;
+    gap: vw(8px);
+    border: vw(2px) solid transparent;
+
+    transition: all 200ms;
+
+    &:hover {
+        background-color: $color-light;
+    }
+
+    &:active {
+        background-color: $color-dark;
+    }
+
+    @media screen and (max-width: $screen-width-hd) {
+        padding: vwh(13.5px) vwh(20px);
+        border-radius: vwh(4px);
+        gap: vwh(8px);
+        border-width: vwh(2px);
+    }
+
+    @media screen and (max-width: $screen-width-tablet) {
+        padding: vwt(13.5px) vwt(20px);
+        border-radius: vwt(4px);
+        gap: vwt(8px);
+        border-width: vwt(2px);
+    }
+
+    @media screen and (max-width: $screen-width-mobile) {
+        padding: vwm(13.5px) vwm(20px);
+        border-radius: vwm(4px);
+        gap: vwm(8px);
+        border-width: vwm(2px);
+    }
+
+}
+
+@mixin btn_main_outlined {
+    padding: vw(16px) vw(24px);
+    border-radius: vw(4px);
+
+    display: flex;
+    align-items: center;
+    gap: vw(8px);
+
+    @include t2_sb;
+
+    border: vw(2px) solid $color-main;
+
+    transition: all 200ms;
+
+    &:hover {
+        border-color: $color-light;
+        background-color: $color-light;
+    }
+
+    &:active {
+        border-color: $color-dark;
+        background-color: $color-dark;
+    }
+
+    color: $color-gray-100;
+
+    @media screen and (max-width: $screen-width-hd) {
+        padding: vwh(16px) vwh(24px);
+        border-radius: vwh(4px);
+        gap: vwh(8px);
+        border-width: vwh(2px);
+    }
+
+    @media screen and (max-width: $screen-width-tablet) {
+        padding: vwt(16px) vwt(24px);
+        border-radius: vwt(4px);
+        gap: vwt(8px);
+        border-width: vwt(2px);
+    }
+
+    @media screen and (max-width: $screen-width-mobile) {
+        padding: vwm(16px) vwm(24px);
+        border-radius: vwm(4px);
+        gap: vwm(8px);
+        border-width: vwm(2px);
+    }
+}
+
+@mixin btn_main_outlined_md {
+    @include t3_b;
+
+    padding: vw(13.5px) vw(20px);
+    border-radius: vw(4px);
+
+    color: $color-gray-100;
+
+    display: flex;
+    align-items: center;
+    gap: vw(8px);
+    border: vw(2px) solid $color-main;
+
+    transition: all 200ms;
+
+    &:hover {
+        background-color: $color-light;
+        border-color: $color-light;
+    }
+
+    &:active {
+        background-color: $color-dark;
+        border-color: $color-dark;
+    }
+
+    @media screen and (max-width: $screen-width-hd) {
+        padding: vwh(13.5px) vwh(20px);
+        border-radius: vwh(4px);
+        gap: vwh(8px);
+        border-width: vwh(2px);
+    }
+
+    @media screen and (max-width: $screen-width-tablet) {
+        padding: vwt(13.5px) vwt(20px);
+        border-radius: vwt(4px);
+        gap: vwt(8px);
+        border-width: vwt(2px);
+    }
+
+    @media screen and (max-width: $screen-width-mobile) {
+        padding: vwm(13.5px) vwm(20px);
+        border-radius: vwm(4px);
+        gap: vwm(8px);
+        border-width: vwm(2px);
+    }
+
+}
+
+@mixin btn_arrow_left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: vw(48px);
+    height: vw(48px);
+
+    background-color: $color-gray-100;
+
+    border-radius: vw(4px);
+
+    position: relative;
+
+    transition: all 200ms;
+
+    &:hover {
+        background-color: $color-light;
+        svg {
+            path {
+                stroke: $color-gray-100;
+            }
+        }
+    }
+
+    &:active {
+        background-color: $color-dark;
+
+        svg {
+            path {
+                stroke: $color-gray-100;
+            }
+        }
+    }
+
+    svg {
+        width: vw(24px);
+        height: vw(24px);
+
+        transition: all 200ms;
+
+        @media screen and (max-width: $screen-width-hd) {
+            width: vwh(24px);
+            height: vwh(24px);
+        }
+
+        @media screen and (max-width: $screen-width-tablet) {
+            width: vwt(24px);
+            height: vwt(24px);
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            width: vwm(24px);
+            height: vwm(24px);
+        }
+    }
+
+    @media screen and (max-width: $screen-width-hd) {
+        width: vwh(48px);
+        height: vwh(48px);
+        border-radius: vwh(4px);
+    }
+
+    @media screen and (max-width: $screen-width-tablet) {
+        width: vwt(48px);
+        height: vwt(48px);
+        border-radius: vwt(4px);
+    }
+
+    @media screen and (max-width: $screen-width-mobile) {
+        width: vwm(48px);
+        height: vwm(48px);
+        border-radius: vwm(4px);
+    }
+}
+
+@mixin btn_arrow_right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: vw(48px);
+    height: vw(48px);
+
+    background-color: $color-gray-100;
+
+    border-radius: vw(4px);
+
+    position: relative;
+
+    transition: all 200ms;
+
+    &:hover {
+        background-color: $color-light;
+
+        svg {
+            path {
+                stroke: $color-gray-100;
+            }
+        }
+    }
+
+    &:active {
+        background-color: $color-dark;
+
+        svg {
+            path {
+                stroke: $color-gray-100;
+            }
+        }
+    }
+
+    svg {
+        width: vw(24px);
+        height: vw(24px);
+        transition: all 200ms;
+
+        @media screen and (max-width: $screen-width-hd) {
+            width: vwh(24px);
+            height: vwh(24px);
+        }
+
+        @media screen and (max-width: $screen-width-tablet) {
+            width: vwt(24px);
+            height: vwt(24px);
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            width: vwm(24px);
+            height: vwm(24px);
+        }
+    }
+
+    @media screen and (max-width: $screen-width-hd) {
+        width: vwh(48px);
+        height: vwh(48px);
+        border-radius: vwh(4px);
+    }
+
+    @media screen and (max-width: $screen-width-tablet) {
+        width: vwt(48px);
+        height: vwt(48px);
+        border-radius: vwt(4px);
+    }
+
+    @media screen and (max-width: $screen-width-mobile) {
+        width: vwm(48px);
+        height: vwm(48px);
+        border-radius: vwm(4px);
+    }
+}
+
+@mixin btn_tg {
+    display: inline-block;
+    width: vw(48px);
+    height: vw(48px);
+
+    border-radius: vw(8px);
+
+    position: relative;
+
+    transition: all 200ms;
+
+    &::before {
+        content: "";
+
+        position: absolute;
+
+        transition: all 200ms;
+
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+        background-image: url("../img/icons/tg_static.svg");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        width: vw(48px);
+        height: vw(48px);
+
+        @media screen and (max-width: $screen-width-hd) {
+            width: vwh(48px);
+            height: vwh(48px);
+        }
+
+        @media screen and (max-width: $screen-width-tablet) {
+            width: vwt(48px);
+            height: vwt(48px);
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            width: vwm(48px);
+            height: vwm(48px);
+        }
+    }
+
+    &:hover::before {
+        background-image: url("../img/icons/tg_hover.svg");
+    }
+
+    &:active::before {
+        background-image: url("../img/icons/tg_press.svg");
+    }
+
+    @media screen and (max-width: $screen-width-hd) {
+        width: vwh(48px);
+        height: vwh(48px);
+        border-radius: vwh(8px);
+    }
+
+    @media screen and (max-width: $screen-width-tablet) {
+        width: vwt(48px);
+        height: vwt(48px);
+        border-radius: vwt(8px);
+    }
+
+    @media screen and (max-width: $screen-width-mobile) {
+        width: vwm(48px);
+        height: vwm(48px);
+        border-radius: vwm(8px);
+    }
+}
+@mixin btn_vk {
+    display: inline-block;
+
+    border-radius: vw(8px);
+
+    position: relative;
+
+    transition: all 200ms;
+
+    &::before {
+        content: "";
+
+        position: absolute;
+
+        top: 50%;
+        left: 50%;
+
+        transition: all 200ms;
+
+        transform: translate(-50%, -50%);
+        background-image: url("../img/icons/vk_static.svg");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        width: vw(48px);
+        height: vw(48px);
+
+        @media screen and (max-width: $screen-width-hd) {
+            width: vwh(48px);
+            height: vwh(48px);
+        }
+
+        @media screen and (max-width: $screen-width-tablet) {
+            width: vwt(48px);
+            height: vwt(48px);
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            width: vwm(48px);
+            height: vwm(48px);
+        }
+    }
+
+    &:hover::before {
+        background-image: url("../img/icons/vk_hover.svg");
+    }
+
+    &:active::before {
+        background-image: url("../img/icons/vk_press.svg");
+    }
+
+    width: vw(48px);
+    height: vw(48px);
+
+    @media screen and (max-width: $screen-width-hd) {
+        width: vwh(48px);
+        height: vwh(48px);
+        border-radius: vwh(8px);
+    }
+
+    @media screen and (max-width: $screen-width-tablet) {
+        width: vwt(48px);
+        height: vwt(48px);
+        border-radius: vwt(8px);
+    }
+
+    @media screen and (max-width: $screen-width-mobile) {
+        width: vwm(48px);
+        height: vwm(48px);
+        border-radius: vwm(8px);
+    }
+}
+
+// 88
+// 88                                           ,d
+// 88                                           88
+// 88  8b,dPPYba,   8b,dPPYba,   88       88  MM88MMM  ,adPPYba,
+// 88  88P'   `"8a  88P'    "8a  88       88    88     I8[    ""
+// 88  88       88  88       d8  88       88    88      `"Y8ba,
+// 88  88       88  88b,   ,a8"  "8a,   ,a88    88,    aa    ]8I
+// 88  88       88  88`YbbdP"'    `"YbbdP'Y8    "Y888  `"YbbdP"'
+//                  88
+//                  88
+
+@mixin input_text {
+    @include t2;
+
+    padding: vw(16px);
+    border-radius: vw(4px);
+    border: vw(2px) solid $color-gray-300;
+
+    width: 100%;
+
+    color: $color-gray-100;
+
+    transition: all 200ms;
+
+    @media screen and (max-width: $screen-width-hd) {
+        padding: vwh(16px);
+        border-radius: vwh(4px);
+        border-width: vwh(2px);
+    }
+
+    @media screen and (max-width: $screen-width-tablet) {
+        @include t3;
+        padding: vwt(16px);
+        border-radius: vwt(4px);
+        border-width: vwt(2px);
+    }
+
+    @media screen and (max-width: $screen-width-mobile) {
+        @include t3;
+        padding: vwm(16px);
+        border-radius: vwm(4px);
+        border-width: vwm(2px);
+    }
+
+    &:hover {
+        border-color: $color-lighter;
+    }
+
+    &:focus {
+        border-color: $color-main;
+    }
+}
+
+@mixin input_checkbox {
+    appearance: none;
+
+    width: vw(20px);
+    height: vw(20px);
+
+    background-image: url("../img/icons/checkbox_static.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    transition: all 200ms;
+
+    &:hover {
+        background-image: url("../img/icons/checkbox_hover.svg");
+    }
+
+    &:checked {
+        background-image: url("../img/icons/checkbox_active_static.svg");
+    }
+
+    &:checked:hover {
+        background-image: url("../img/icons/checkbox_active_hover.svg");
+    }
+
+    @media screen and (max-width: $screen-width-hd) {
+        width: vwh(20px);
+        height: vwh(20px);
+    }
+
+    @media screen and (max-width: $screen-width-tablet) {
+        width: vwt(20px);
+        height: vwt(20px);
+    }
+
+    @media screen and (max-width: $screen-width-mobile) {
+        width: vwm(20px);
+        height: vwm(20px);
+    }
+}
+
+@mixin link {
+    text-decoration: underline;
+    color: $color-gray-400;
+
+    transition: all 200ms;
+
+    &:hover {
+        color: $color-main;
+    }
+
+    &:active {
+        color: $color-dark;
+    }
+}

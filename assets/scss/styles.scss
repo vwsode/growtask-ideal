@@ -1,0 +1,54 @@
+// Libs
+@import "./libs/swiper_bundle.scss";
+// @import "./libs/normalize.scss";
+
+@import "./globals/reset.scss";
+@import "./globals/variables.scss";
+@import "./globals/functions.scss";
+@import "./globals/mixins.scss";
+@import "./globals/common.scss";
+@import "./globals/fonts.scss";
+
+// Components
+@import "./components/accordion.scss";
+@import "./components/card-product.scss";
+@import "./components/card-helper.scss";
+@import "./components/card-site.scss";
+@import "./components/card-promotion.scss";
+@import "./components/card-additional.scss";
+@import "./components/card-review.scss";
+
+// Partials
+@import "./partials/popup_price.scss";
+@import "./partials/footer.scss";
+
+@import "./partials/modal_consult.scss";
+@import "./partials/modal_consult_success.scss";
+@import "./partials/modal_preview.scss";
+@import "./partials/modal_preview_success.scss";
+
+// Sections
+@import "./sections/intro.scss";
+
+@import "./sections/about.scss";
+
+@import "./sections/about_block_1.scss";
+@import "./sections/about_block_2.scss";
+@import "./sections/about_block_3.scss";
+
+@import "./sections/step_layout.scss";
+
+@import "./sections/step_1.scss";
+@import "./sections/step_2.scss";
+@import "./sections/step_3.scss";
+@import "./sections/step_4.scss";
+@import "./sections/step_5.scss";
+
+@import "./sections/features.scss";
+@import "./sections/portfolio.scss";
+@import "./sections/form.scss";
+@import "./sections/calculation.scss";
+
+@import "./sections/presentation.scss";
+@import "./sections/faq.scss";
+@import "./sections/reviews.scss";

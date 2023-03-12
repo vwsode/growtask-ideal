@@ -1,0 +1,96 @@
+.popup-price {
+    position: fixed;
+
+    top: calc(100% - vw(20px));
+    left: calc(100% - (vw(436px) + vw(20px)));
+
+    transform: translateY(-100%);
+
+    border-radius: vw(8px);
+
+    z-index: 100;
+
+    background-color: $color-gray-100;
+
+    box-shadow: 0px 0px vw(20px) rgba(25, 25, 25, 0.1);
+
+    padding: vw(20px);
+
+    display: flex;
+    align-items: center;
+    gap: vw(20px);
+
+    max-width: vw(436px);
+
+    @media screen and (max-width: $screen-width-hd) {
+        border-radius: vwh(8px);
+        padding: vwh(20px);
+        // bottom: vwh(20px);
+        // right: vwh(20px);
+        gap: vwh(20px);
+        max-width: vwh(436px);
+        box-shadow: 0px 0px vwh(20px) rgba(25, 25, 25, 0.1);
+
+        top: calc(100% - vwh(20px));
+        left: calc(100% - (vwh(436px) + vwh(20px)));
+    }
+
+    @media screen and (max-width: $screen-width-tablet) {
+        display: none;
+        max-width: none;
+
+        border-radius: vwt(8px);
+        padding: vwt(20px);
+        // bottom: vwt(20px);
+        // right: vwt(20px);
+        gap: vwt(20px);
+        max-width: vwt(436px);
+        box-shadow: 0px 0px vwt(20px) rgba(25, 25, 25, 0.1);
+
+        top: calc(100% - vwt(20px));
+        left: calc(100% - (vwt(436px) + vwt(20px)));
+    }
+
+    @media screen and (max-width: $screen-width-mobile) {
+        // bottom: vwm(20px);
+        // right: vwm(20px);
+        border-radius: vwm(8px);
+        padding: vwm(20px);
+        gap: vwm(20px);
+        max-width: vwm(436px);
+        box-shadow: 0px 0px vwm(20px) rgba(25, 25, 25, 0.1);
+
+        top: calc(100% - vwm(20px));
+        left: calc(100% - (vwm(436px) + vwm(20px)));
+    }
+
+    &__text {
+        &-description {
+            @include t3;
+
+            margin-bottom: vw(4px);
+
+            @media screen and (max-width: $screen-width-hd) {
+                margin-bottom: vwh(4px);
+            }
+            @media screen and (max-width: $screen-width-tablet) {
+                margin-bottom: vwt(4px);
+            }
+            @media screen and (max-width: $screen-width-mobile) {
+                margin-bottom: vwm(4px);
+            }
+
+            color: $color-gray-400;
+        }
+
+        &-title {
+            @include h4;
+            color: $color-gray-600;
+            text-align: right;
+        }
+    }
+
+    &__btn {
+        @include btn_main_filled;
+    }
+}

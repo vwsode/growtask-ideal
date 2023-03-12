@@ -1,0 +1,23 @@
+@function stripUnit($value) {
+    @return $value / ($value * 0 + 1);
+}
+
+@function rem($pxValue) {
+    @return #{stripUnit($pxValue) / stripUnit($base-font)}rem;
+}
+
+@function vw($px, $media: 1920) {
+    @return #{stripUnit($px) / stripUnit($media) * 100}vw;
+}
+
+@function vwh($px, $media: 1366) {
+    @return #{stripUnit($px) / stripUnit($media) * 100}vw;
+}
+
+@function vwt($px, $media: 768) {
+    @return #{stripUnit($px) / stripUnit($media) * 100}vw;
+}
+
+@function vwm($px, $media: 375) {
+    @return #{stripUnit($px) / stripUnit($media) * 100}vw;
+}

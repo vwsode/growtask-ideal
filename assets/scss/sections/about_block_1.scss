@@ -1,0 +1,44 @@
+#about-1.about {
+    &::before {
+        content: "";
+        background: url("../img/about/bg_image.png") no-repeat center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: vw(250px);
+        background-size: cover;
+    }
+
+    @media screen and (max-width: $screen-width-tablet) {
+        &::before {
+            content: unset;
+        }
+    }
+
+    .about__logos {
+        background-size: cover;
+        @media screen and (max-width: $screen-width-tablet) {
+            background: url("../img/about/growtask_tablet_logos.png") no-repeat center;
+            background-size: cover;
+            height: vwt(84px);
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            background: url("../img/about/growtask_mobile_logos.png") no-repeat center;
+            background-size: cover;
+            height: vwm(84px);
+        }
+    }
+
+    .about__inner {
+        padding: vw(160px) 0;
+
+        @media screen and (max-width: $screen-width-hd) {
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            padding: vwm(80px) 0 vwm(40px);
+        }
+    }
+}

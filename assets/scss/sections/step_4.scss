@@ -1,0 +1,30 @@
+#step-4 {
+    .step__inner {
+        padding: vw(80px) 0 vw(80px);
+
+        @media screen and (max-width: $screen-width-hd) {
+            padding: vwh(80px) 0 vwh(80px);
+        }
+
+        @media screen and (max-width: $screen-width-tablet) {
+            padding: vwt(40px) 0 vwt(40px);
+        }
+        
+        @media screen and (max-width: $screen-width-mobile) {
+            padding: vwm(40px) 0 vwm(40px);
+        }
+    }
+    .step__cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        @media screen and (max-width: $screen-width-mobile) {
+            grid-template-columns: 1fr;
+            gap: vwm(20px);
+        }
+    }
+
+    .step__note {
+        text-align: center;
+    }
+}

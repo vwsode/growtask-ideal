@@ -1,0 +1,241 @@
+.portfolio {
+    background-color: $color-gray-500;
+    overflow-x: hidden;
+
+    &__inner {
+        padding: vw(80px) 0 vw(160px) 0;
+
+        @media screen and (max-width: $screen-width-hd) {
+            padding: vwh(80px) 0 vwh(160px) 0;
+        }
+        
+        @media screen and (max-width: $screen-width-tablet) {
+            padding: vwt(40px) 0 vwt(80px) 0;
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            padding: vwm(40px) 0 vwm(80px);
+        }
+    }
+
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        margin-bottom: vw(60px);
+
+        @media screen and (max-width: $screen-width-hd) {
+            margin-bottom: vwh(60px);
+        }
+        
+        @media screen and (max-width: $screen-width-tablet) {
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: vwt(40px);
+            gap: vwt(20px);
+        }
+        
+        @media screen and (max-width: $screen-width-mobile) {
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: vwm(40px);
+            gap: vwm(20px);
+        }
+
+        &-btns {
+            display: flex;
+            align-items: center;
+
+            @media screen and (max-width: $screen-width-mobile) {
+                width: 100%;
+            }
+        }
+    }
+
+    &__title {
+        @include h2;
+        max-width: vw(700px);
+        color: $color-gray-100;
+
+        @media screen and (max-width: $screen-width-hd) {
+            max-width: vwh(700px);
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            max-width: 100%;
+        }
+
+        &--colored {
+            color: $color-light;
+        }
+    }
+
+    &__btn {
+        @include btn_main_outlined_md;
+
+        margin-right: vw(12px);
+
+        @media screen and (max-width: $screen-width-hd) {
+            margin-right: vwh(12px);
+        }
+
+        @media screen and (max-width: $screen-width-tablet) {
+            margin-right: vwt(12px);
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            width: 100%;
+            margin-right: 0;
+            justify-content: center;
+        }
+    }
+    &__slider {
+        position: relative;
+        padding: 0 0 0 vw(20px);
+        margin-left: vw(-20px);
+        overflow-x: hidden;
+        --shift: calc(100vw / 2 - 72vw / 2);
+        margin-right: calc(var(--shift) * -1);
+        width: calc(100% + var(--shift));
+
+        @media screen and (max-width: 1401px) {
+            padding: 0 0 0 vwh(20px);
+            margin-left: vwh(-20px);
+            --shift: calc(100vw / 2 - 90vw / 2);
+            margin-right: calc(var(--shift) * -1);
+            width: calc(100% + var(--shift));
+        }
+
+        @media screen and (max-width: 991px) {
+            padding: 0 0 0 vwt(20px);
+            margin-left: vwt(-20px);
+            margin-right: vwt(-16px);
+            width: 100vw;
+        }
+
+        @media screen and (max-width: 576px) {
+            padding: 0 0 0 vwm(20px);
+            margin-left: vwm(-20px);
+            margin-right: vwm(-16px);
+            width: 100vw;
+        }
+
+        .swiper-slide-prev {
+            .portfolio__slide {
+                opacity: 0;
+            }
+        }
+
+        &-controls {
+            display: flex;
+            gap: vw(12px);
+
+            @media screen and (max-width: $screen-width-hd) {
+                gap: vwh(12px);
+            }
+
+            @media screen and (max-width: $screen-width-tablet) {
+                display: none;
+            }
+
+            @media screen and (max-width: $screen-width-mobile) {
+            }
+        }
+        &-prev {
+            @include btn_arrow_left;
+        }
+        &-next {
+            @include btn_arrow_right;
+        }
+    }
+    &__slide {
+        opacity: 1;
+        transition: all 200ms;
+        height: vw(480px);
+        overflow: hidden;
+        border-radius: vw(8px);
+        position: relative;
+
+        &:hover {
+            .portfolio__slide-image::before {
+                background-color: rgba(52, 52, 52, 0.2);
+            }
+            .portfolio__slide-title {
+                color: $color-light;
+            }
+        }
+
+        &:active {
+            .portfolio__slide-image::before {
+                background-color: rgba(52, 52, 52, 0.4);
+            }
+        }
+
+        @media screen and (max-width: $screen-width-hd) {
+            border-radius: vwh(8px);
+            height: vwh(480px);
+        }
+
+        @media screen and (max-width: $screen-width-tablet) {
+            border-radius: vwt(8px);
+            height: vwt(200px);
+            width: vwt(280px);
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            border-radius: vwm(8px);
+            height: vwm(200px);
+            width: 100%;
+        }
+
+        &-image {
+            width: 100%;
+            height: 100%;
+
+            position: relative;
+
+            &::before {
+                content: "";
+
+                width: 100%;
+                height: 100%;
+
+                position: absolute;
+
+                top: 0;
+                right: 0;
+
+                transition: all 200ms;
+            }
+        }
+
+        &-title {
+            @include t1_sb;
+            color: $color-gray-100;
+
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: vw(20px) vw(40px);
+
+            transition: all 200ms;
+
+            @media screen and (max-width: $screen-width-hd) {
+                padding: vwh(20px) vwh(40px);
+            }
+
+            @media screen and (max-width: $screen-width-tablet) {
+                @include t3_b;
+                padding: vwt(12px);
+            }
+
+            @media screen and (max-width: $screen-width-mobile) {
+                padding: vwm(12px);
+            }
+
+            background-color: $color-gray-400;
+        }
+    }
+}

@@ -1,0 +1,54 @@
+#about-2.about {
+    &::before {
+        content: "";
+        background: url("../img/about/bg_image.png") no-repeat center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: vw(250px);
+        background-size: cover;
+    }
+
+    @media screen and (max-width: $screen-width-tablet) {
+        &::before {
+            content: unset;
+        }
+    }
+
+    .about__logos {
+        @media screen and (max-width: $screen-width-tablet) {
+            background: url("../img/about/growtask_tablet_logos.png") no-repeat center;
+            background-size: cover;
+            height: vwt(84px);
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            background: url("../img/about/growtask_mobile_logos.png") no-repeat center;
+            background-size: cover;
+            height: vwm(84px);
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            padding-bottom: vwm(40px);
+        }
+    }
+
+    .about__inner {
+        padding: vw(160px) 0 vw(120px);
+        border-top: vw(2px) solid $color-gray-400;
+
+        @media screen and (max-width: $screen-width-hd) {
+            border-top: vwh(2px) solid $color-gray-400;
+            padding: vwh(160px) 0 vwh(120px);
+        }
+
+        @media screen and (max-width: $screen-width-tablet) {
+            padding: vwt(80px) 0 vwt(40px);
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            padding: vwm(80px) 0 vwm(40px);
+        }
+    }
+}

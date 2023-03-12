@@ -1,0 +1,274 @@
+.modal-consult {
+    opacity: 0;
+    pointer-events: none;
+    user-select: none;
+
+    &::before {
+        content: "";
+        background-color: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        z-index: 999;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0;
+
+        transition: all 200ms;
+    }
+
+    &--active {
+        &::before {
+            opacity: 1;
+        }
+        opacity: 1;
+        pointer-events: all;
+        user-select: auto;
+    }
+
+    &__wrapper {
+        z-index: 1000;
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+
+        position: fixed;
+        background-color: $color-gray-400;
+
+        border-radius: vw(8px);
+        max-width: vw(768px);
+
+        width: 100%;
+        transition: all 200ms;
+
+        @media screen and (max-width: $screen-width-hd) {
+            border-radius: vwh(8px);
+            max-width: vwh(768px);
+        }
+
+        @media screen and (max-width: $screen-width-tablet) {
+            border-radius: vwt(8px);
+            max-width: vwm(768px);
+
+            bottom: 0;
+            transform: unset;
+            top: unset;
+            right: unset;
+            left: unset;
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            border-radius: vwm(8px);
+            max-width: vwm(374px);
+        }
+    }
+
+    &__inner {
+        padding: vw(60px);
+
+        @media screen and (max-width: $screen-width-hd) {
+            padding: vwh(60px);
+        }
+
+        @media screen and (max-width: $screen-width-tablet) {
+            padding: vwt(20px);
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            padding: vwm(20px);
+        }
+    }
+
+    &__header {
+        margin-bottom: vw(40px);
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        @media screeen and (max-width: $screen-width-hd) {
+            margin-bottom: vwh(40px);
+        }
+
+        @media screen and (max-width: $screen-width-tablet) {
+            max-width: vwt(400px);
+            margin: 0 auto;
+            margin-bottom: vwt(24px);
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            margin-bottom: vwm(20px);
+            max-width: 100%;
+        }
+    }
+
+    &__title {
+        @include h4;
+        color: $color-gray-100;
+
+        flex: 1;
+
+        &--colored {
+            color: $color-light;
+        }
+    }
+
+    &__btn-close {
+        @include btn_main_filled;
+
+        width: vw(48px);
+        height: vw(48px);
+
+        padding: 0 !important;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: absolute;
+        top: 0;
+        right: vw(-20px);
+
+        transform: translateX(100%);
+
+        @media screen and (max-width: $screen-width-hd) {
+            position: absolute;
+            width: vwh(48px);
+            height: vwh(48px);
+        }
+        @media screen and (max-width: $screen-width-tablet) {
+            width: vwt(48px);
+            height: vwt(48px);
+
+            transform: unset;
+            top: vwt(20px);
+            right: vwt(20px);
+        }
+        @media screen and (max-width: $screen-width-mobile) {
+            right: unset;
+
+            position: relative;
+
+
+            width: vwm(48px);
+            height: vwm(48px);
+        }
+
+        svg {
+            min-width: vw(24px);
+            min-height: vw(24px);
+
+            @media screen and (max-width: $screen-width-hd) {
+                min-width: vwh(24px);
+                min-height: vwh(24px);
+            }
+            @media screen and (max-width: $screen-width-tablet) {
+                min-width: vwt(24px);
+                min-height: vwt(24px);
+            }
+            @media screen and (max-width: $screen-width-mobile) {
+                min-width: vwm(24px);
+                min-height: vwm(24px);
+            }
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+    }
+
+    &__form {
+        margin: 0 auto;
+
+        @media screen and (max-width: $screen-width-tablet) {
+            max-width: vwt(400px);
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            max-width: 100%;
+        }
+
+        &-fields {
+            display: flex;
+            gap: vw(12px);
+            margin-bottom: vw(20px);
+
+            @media screen and (max-width: $screen-width-hd) {
+                gap: vwh(12px);
+                margin-bottom: vwh(20px);
+            }
+
+            @media screen and (max-width: $screen-width-tablet) {
+                gap: vwt(12px);
+                margin-bottom: vwt(20px);
+            }
+
+            @media screen and (max-width: $screen-width-mobile) {
+                gap: vwm(12px);
+                margin-bottom: vwm(20px);
+            }
+
+            flex-direction: column;
+        }
+        &-input {
+            @include input_text;
+            resize: none;
+        }
+
+        &-privacy {
+            flex: 1;
+            @include t2;
+            color: $color-gray-300;
+
+            display: flex;
+            align-items: flex-start;
+
+            gap: vw(10px);
+
+            @media screen and (max-width: $screen-width-hd) {
+                gap: vwh(10px);
+            }
+
+            @media screen and (max-width: $screen-width-tablet) {
+                gap: vwt(10px);
+            }
+
+            @media screen and (max-width: $screen-width-mobile) {
+                gap: vwm(10px);
+            }
+        }
+
+        &-checkbox {
+            @include input_checkbox;
+        }
+
+        &-bot {
+            display: flex;
+            gap: vw(20px);
+
+            @media screen and (max-width: $screen-width-hd) {
+                gap: vwh(20px);
+            }
+
+            @media screen and (max-width: $screen-width-tablet) {
+                gap: vwt(12px);
+                flex-direction: column;
+            }
+            @media screen and (max-width: $screen-width-mobile) {
+                gap: vwm(12px);
+            }
+        }
+        &-btn {
+            @include btn_main_filled;
+
+            @media screen and (max-width: $screen-width-tablet) {
+                width: 100%;
+                justify-content: center;
+            }
+
+            @media screen and (max-width: $screen-width-mobile) {
+            }
+        }
+    }
+}

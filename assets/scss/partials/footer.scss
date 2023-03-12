@@ -1,0 +1,104 @@
+.footer {
+    background-color: $color-gray-500;
+
+    position: relative;
+    z-index: 101;
+
+    background: url("../img/footer/footer_bg.png") center no-repeat;
+    background-size: cover;
+
+    @media screen and (max-width: $screen-width-hd) {
+        background-image: url("../img/footer/footer_bg_hd.png");
+    }
+
+    @media screen and (max-width: $screen-width-tablet) {
+        background: $color-gray-500;
+    }
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        padding: vw(160px) 0;
+        gap: vw(20px);
+        justify-content: space-between;
+
+        @media screen and (max-width: $screen-width-hd) {
+            gap: vwh(20px);
+            padding: vwh(160px) 0;
+        }
+
+        @media screen and (max-width: $screen-width-tablet) {
+            padding: vwt(80px) 0;
+            gap: vwt(20px);
+
+            max-width: vwt(440px);
+            margin: 0 auto;
+
+            flex-direction: column;
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            max-width: 100%;
+            gap: 0;
+        }
+    }
+
+    &__form {
+        width: 100%;
+        max-width: vw(700px);
+
+        @media screen and (max-width: $screen-width-hd) {
+            width: 50%;
+            max-width: none;
+        }
+
+        @media screen and (max-width: $screen-width-tablet) {
+            width: 100%;
+        }
+    }
+
+    &__message {
+        width: vw(580px);
+        padding: vw(40px);
+
+        border-radius: vw(8px);
+        background-color: $color-gray-400;
+
+        @media screen and (max-width: $screen-width-hd) {
+            width: 50%;
+            border-radius: vwh(8px);
+            padding: vwh(40px);
+        }
+
+        @media screen and (max-width: $screen-width-tablet) {
+            width: 100%;
+            padding: vwt(20px);
+            border-radius: vwt(8px);
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            margin-bottom: vwm(20px);
+            padding: vwm(20px);
+            border-radius: vwm(8px);
+        }
+
+        &-title {
+            @include h2;
+            margin-bottom: vw(12px);
+
+            color: $color-gray-100;
+        }
+        &-description {
+            @include t1_sb;
+            color: $color-gray-100;
+
+            @media screen and (max-width: $screen-width-mobile) {
+                @include t2_sb;
+            }
+
+            &--colored {
+                color: $color-light;
+            }
+        }
+    }
+}

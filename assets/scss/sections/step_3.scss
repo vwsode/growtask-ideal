@@ -1,0 +1,64 @@
+#step-3 {
+    .step__inner {
+        padding: vw(160px) 0 vw(80px);
+
+        @media screen and (max-width: $screen-width-hd) {
+            padding: vwh(160px) 0 vwh(80px);
+        }
+
+        @media screen and (max-width: $screen-width-tablet) {
+            padding: vwt(80px) 0 vwt(40px);
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            padding: vwm(80px) 0 vwm(40px);
+        }
+    }
+
+    .step__cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        @media screen and (max-width: $screen-width-tablet) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            gap: vwm(20px);
+            grid-template-columns: 1fr;
+        }
+    }
+    .step__note {
+        text-align: center;
+    }
+    .step__notice {
+        max-width: vw(780px);
+        margin-top: vw(20px);
+        padding: vw(20px) vw(40px);
+        border-radius: vw(8px);
+
+        @media screen and (max-width: $screen-width-hd) {
+            max-width: vwh(780px);
+            margin-top: vwh(20px);
+            padding: vwh(20px) vwh(40px);
+            border-radius: vwh(8px);
+        }
+
+        @media screen and (max-width: $screen-width-tablet) {
+            margin-top: vwt(16px);
+            padding: vwt(20px) vwt(20px);
+            border-radius: vwt(8px);
+            width: 100%;
+            max-width: unset;
+        }
+
+        @media screen and (max-width: $screen-width-mobile) {
+            margin-top: vwm(16px);
+            padding: vwm(20px) vwm(20px);
+            border-radius: vwm(8px);
+        }
+
+        background-color: $color-gray-200;
+        @include t2;
+    }
+}
